@@ -1,0 +1,27 @@
+{
+  "scripts": {
+    "tsc": "tsc",
+    "tsc-watch": "tsc --watch",
+    "touch": "touch dist/main.js",
+    "dev": "concurrently 'npm-watch' 'yarn tsc-watch'"
+  },
+  "watch": {
+    "touch": {
+      "patterns": [
+        "dist"
+      ],
+      "extensions": "js",
+      "ignore": "main.js"
+    }
+  },
+  "devDependencies": {
+    "concurrently": "^6.0.0",
+    "typescript": "^4.2.3"
+  },
+  "dependencies": {
+    "npm-watch": "^0.9.0"
+  },
+  "prettier": {
+    "printWidth": 100
+  }
+}
